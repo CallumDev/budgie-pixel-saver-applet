@@ -58,10 +58,11 @@ public class Applet : Budgie.Applet
         this.event_box.add(this.label);
 
         this.applet_container = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        this.applet_container.pack_start (this.event_box, false, false, 0);
+        this.applet_container.pack_start (this.close_button, false, false, 0);
         this.applet_container.pack_start (this.minimize_button, false, false, 0);
         this.applet_container.pack_start (this.maximize_button, false, false, 0);
-        this.applet_container.pack_start (this.close_button, false, false, 0);
+        this.applet_container.pack_start (this.event_box, false, false, 0);
+        
         this.add (this.applet_container);
 
         this.set_css_styles();
